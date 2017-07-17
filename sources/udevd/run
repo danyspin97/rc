@@ -4,5 +4,4 @@ foreground { fdmove -c 1 2 s6-echo "Starting udevd" }
 
 fdmove -c 2 1
 exec -c
-s6-uevent-spawner
 /bin/udevd

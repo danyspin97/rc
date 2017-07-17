@@ -1,0 +1,7 @@
+#!/bin/execlineb -P
+
+dbus-generateuuid --ensure /etc/machine-id
+
+foreground { mkdir /run/dbus }
+
+dbus-daemon --system --nofork --nosyslog

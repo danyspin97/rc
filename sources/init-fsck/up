@@ -1,12 +1,8 @@
+#!/bin/execlineb -P
+
 foreground { fdmove -c 1 2 s6-echo "Starting init-fsck" }
 
-s6-envdir /etc/s6/env/host/
-importas -s fsck fsck
-
-forx -o 0 dev { ${fsck} }
-importas -i dev dev
-
-foreground { e2fsck -p $dev }
+foreground { fsck -A }
 
 importas -i ? ?
 s6-test ( $? -eq 0 ) -o ( $? -eq 1 )

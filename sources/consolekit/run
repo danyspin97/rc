@@ -1,0 +1,3 @@
+#!/bin/execlineb -P
+
+console-kit-daemon --no-daemon

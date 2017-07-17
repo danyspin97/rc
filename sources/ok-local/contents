@@ -4,7 +4,7 @@ mount-efi
 mount-home
 
 getty-tty3
+getty-tty4
 klogd-srv
 acpid
-socklog
 fifodir-cleanup

@@ -1,6 +1,5 @@
 #!/command/execlineb -P
 
-fdmove -c 2 1
-importas PATH PATH
-export PATH ${PATH}:/usr/sbin
-/usr/sbin/acpid -f
+foreground { fdmove -c 1 2 s6-echo "Starting acpid" }
+
+acpid -f

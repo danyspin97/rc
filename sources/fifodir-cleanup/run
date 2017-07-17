@@ -1,5 +1,7 @@
 #!/bin/execlineb -P
 
+foreground { fdmove -c 1 2 s6-echo "Starting fifodir-cleanup" }
+
 fdmove -c 2 1
 
 if
