@@ -1,0 +1,15 @@
+mount-proc
+mount-dev
+mount-tmp
+mount-rwfs
+
+
+init-udev
+init-dirs
+init-fsck
+init-lan
+init-sysctl
+init-tty
+init-urandom
+
+udevd

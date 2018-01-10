@@ -1,0 +1,12 @@
+#!/bin/execlineb -P
+
+foreground { fdmove -c 1 2 s6-echo "Starting klog" }
+
+fdmove -c 2 1
+
+s6-envuidgid nobody
+runcon -t s6_logger_kern_t
+
+redirfd -r 0 /proc/kmsg
+s6-applyuidgid -zU
+socklog ucpsi -U

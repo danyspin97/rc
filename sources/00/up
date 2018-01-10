@@ -1,0 +1,2 @@
+foreground { fdmove -c 1 2 s6-echo "init-stage2 starting." }
+s6-hostname danyspin97-laptop

@@ -1,0 +1,5 @@
+foreground { fdmove -c 1 2 s6-echo "Starting init-urandom" }
+
+redirfd -w 1 /dev/urandom
+pipeline { if { s6-clock } s6-clock }
+sha512sum

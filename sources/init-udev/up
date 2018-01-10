@@ -1,0 +1,9 @@
+foreground { fdmove -c 1 2 s6-echo "Starting init-udev" }
+
+foreground { udevadm trigger --attr-match=dev --action=add }
+foreground { udevadm trigger --subsystem-match=net --action=add }
+
+foreground { udavedm trigger --type=subsystems --action=add }
+foreground { udevadm trigger --type=devices --action=add }
+
+foreground { udevadm settle --timeout=15 }
