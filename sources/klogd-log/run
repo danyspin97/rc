@@ -1,4 +1,5 @@
-#!/command/execlineb -P
+#!/bin/execlineb -P
+
 s6-setuidgid klog
 exec -c
 s6-log -- s1000000 -"^kern\.debug:" t /var/log/klogd

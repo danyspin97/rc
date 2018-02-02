@@ -1,2 +1,2 @@
-init-udev
+udev-trigger
 init-tty

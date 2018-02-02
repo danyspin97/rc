@@ -1,0 +1,5 @@
+#!/bin/execlineb -P
+
+# ifthenelse { ping -W 60 -c 1 duckduckgo.com }
+# { fdmove -c 1 2 s6-echo "Connected to the network" }
+# { fdmove -c 1 2 s6-echo "No connection" }

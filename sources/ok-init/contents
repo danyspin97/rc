@@ -1,10 +1,12 @@
-mount-proc
+mount-cgroups
 mount-dev
-mount-tmp
+mount-proc
 mount-rwfs
+mount-sys
+mount-swap
+mount-tmp
 
 
-init-udev
 init-dirs
 init-fsck
 init-lan
@@ -12,4 +14,6 @@ init-sysctl
 init-tty
 init-urandom
 
-udevd
+hwclock
+udev
+udev-trigger

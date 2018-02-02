@@ -1,9 +1,8 @@
+#!/bin/execlineb -P
+
 foreground { fdmove -c 1 2 s6-echo "Starting mount-tmp" }
 
-foreground { mount /tmp }
-foreground
-{
-	s6-mkdir -p /tmp/paludis/build
-	s6-chmod 443 /tmp/paludis/build
-	s6-chmod g+rwx /tmp/paludis/build 
-}
+if { mount /tmp }
+foreground { s6-mkdir -p /tmp/paludis/build }
+foreground { chgrp 443 /tmp/paludis/build }
+foreground { chmod g+rwx /tmp/paludis/build }

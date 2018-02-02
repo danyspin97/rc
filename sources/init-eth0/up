@@ -1,5 +1,0 @@
-#!/bin/execlineb -P
-
-foreground { fdmove -c 1 2 s6-echo "Starting init-eth0" }
-
-ip link set dev eth0 up

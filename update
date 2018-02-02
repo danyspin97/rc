@@ -1,0 +1,9 @@
+#!/bin/bash -P
+
+stamp=`s6-clock`
+dest=/home/danyspin97/rc/sources
+sudo s6-rc-compile /etc/s6-rc/compiled-$stamp $dest
+sudo rm /etc/s6-rc/compiled
+sudo ln -sf /etc/s6-rc/compiled-$stamp /etc/s6-rc/compiled
+s6-echo "Updated s6-rc database"
+

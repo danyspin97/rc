@@ -1,0 +1,15 @@
+#!/bin/execlineb -P
+
+foreground { fdmove -c 1 2 s6-echo "Starting udev-trigger" }
+
+foreground { udevadm control --reload-rules }
+
+foreground { udevadm trigger --attr-match=dev --action=add }
+foreground { udevadm trigger --subsystem-match=net --action=add }
+
+foreground { udevadm trigger --type=subsystems --action=add }
+foreground { udevadm trigger --type=devices --action=add }
+
+foreground { udevadm trigger }
+
+foreground { udevadm settle --timeout=15 }

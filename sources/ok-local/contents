@@ -1,10 +1,14 @@
-fdholder
-
 mount-efi
 mount-home
 
-getty-tty3
-getty-tty4
-klogd-srv
 acpid
-fifodir-cleanup
+cgmanager
+consolekit
+dbus
+irqbalance
+klogd-srv
+lvmetad
+
+getty-tty1
+getty-tty2
+getty-tty3

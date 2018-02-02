@@ -1,0 +1,6 @@
+#!/bin/sh
+rm -rf /etc/s6-linux-init.old
+rm -rf /tmp/s6-linux-init
+sudo mv /etc/s6-linux-init /etc/s6-linux-init.old
+s6-linux-init-maker /tmp/s6-linux-init
+sudo mv /tmp/s6-linux-init /etc

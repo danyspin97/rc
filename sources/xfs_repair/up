@@ -1,0 +1,8 @@
+#!/bin/execlineb -P
+
+# fdmove -c 2 1
+# pipeline s6-mount "" pipeline rg xfs "" pipeline s6-echo "" pipeline cut -d " " -f 1 "" forstdin -po 0 device
+# importas -u device device
+# /usr/host/bin/xfs_repair device
+
+

@@ -1,7 +1,0 @@
-#!/command/execlineb -P
-
-foreground { fdmove -c 1 2 s6-echo "Starting udevd" }
-
-fdmove -c 2 1
-exec -c
-/bin/udevd

@@ -1,0 +1,3 @@
+#!/bin/execlineb -P
+
+laptop_mode stop

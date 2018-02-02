@@ -2,7 +2,7 @@
 
 foreground { fdmove -c 1 2 s6-echo "Starting init-fsck" }
 
-foreground { fsck -A }
+foreground { fsck -A -T }
 
 importas -i ? ?
 s6-test ( $? -eq 0 ) -o ( $? -eq 1 )
